@@ -4,7 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+    <title>Kunskapskontroll 1 - AJAX</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Kolla vädret just nu</h1>
+    <h4></h4>
+    <form>
+      <input type="text" id="input" placeholder="&#128269 Ange en stad..." />
+      <button type="submit" id="search-btn">Sök</button>
+      <button id="clear-btn">Rensa</button>
+    </form>
+    <div id="error-message"></div>
+    <section id="weather-data"></section>
+    <section id="more-weather-data"></section>
+    <script src="/js/app.js"></script>
+  </body>
 </html>
