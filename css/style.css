@@ -27,7 +27,7 @@ body {
 }
 
 form input {
-  min-width: 450px;
+  width: 450px;
   padding: 1rem;
 }
 
@@ -92,6 +92,10 @@ form button {
 /* Media queries */
 
 @media (max-width: 740px) {
+  body {
+    margin: 40px 15px;
+  }
+
   form input {
     width: 100%;
   }
