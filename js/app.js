@@ -9,7 +9,7 @@ const weatherData = document.querySelector("#weather-data");
 const moreWeatherData = document.querySelector("#more-weather-data");
 
 //API key
-//skickas dit vi kom överens om
+//skickas där vi kom överens om
 const myKey = "";
 
 //error message
@@ -47,7 +47,7 @@ const gettingWeatherData = {
   //API call 1
   getWeatherNow(inputValue) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&units=metric&lang=se&appid=${myKey}`;
-    //calling "weather" parameter
+    //calling "weather"
 
     this.callAPI(url).then((data) => {
       const icon = data.weather[0].icon;
@@ -82,7 +82,7 @@ const gettingWeatherData = {
   //API call 2
   getMoreWeatherData(inputValue) {
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&units=metric&lang=se&limit=5&appid=${myKey}`;
-    //calling "forecast" parameter instead of "weather"
+    //calling "forecast" instead of "weather"
 
     this.callAPI(url).then((data) => {
       const icon = data.list[6].weather[0].icon;
@@ -103,7 +103,7 @@ const gettingWeatherData = {
         <h3>Imorgon i ${inputValue}</h3>
         <h4>${data.list[6].dt_txt}</h4>
         <img src="https://openweathermap.org/img/wn/${icon}.png" alt="vädericon">
-        <h4 class="temp">${Math.round(data.list[6].main.temp)}°C</h4>
+        <h4 class="temp">${Math.round(data.list[6].main.temp)} °C</h4>
         <br>
       </div>
     </div>
