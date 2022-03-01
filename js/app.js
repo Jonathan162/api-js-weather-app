@@ -9,7 +9,38 @@ const weatherData = document.querySelector("#weather-data");
 const moreWeatherData = document.querySelector("#more-weather-data");
 
 //API key
+//skickas dit vi kom överens om
 const myKey = "";
+
+//error message
+let errMessage = document.createElement("p");
+errMessage.classList.add("error-message");
+
+//eventlisteners
+SearchBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+  let inputValue = input.value;
+
+  moreWeatherData.innerHTML = "";
+  errDiv.innerHTML = "";
+
+  if (inputValue.trim() === "") {
+    errMessage.innerHTML = "Kan ej vara tom!";
+    errDiv.appendChild(errMessage);
+    return false;
+  } else {
+    gettingWeatherData.getWeatherNow(inputValue);
+  }
+});
+
+ClearBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  weatherData.innerHTML = "";
+  moreWeatherData.innerHTML = "";
+  errDiv.innerHTML = "";
+  input.value = "";
+});
 
 //weather object
 const gettingWeatherData = {
