@@ -95,7 +95,7 @@ const gettingWeatherData = {
       <h4>Vindbyar på upp till: ${data.list[0].wind.gust} m/s</h4>
       <h4>Lufttryck: ${data.list[0].main.pressure} hPa</h4>
       <h4>Luftfuktighet: ${data.list[0].main.humidity}%</h4>
-      <h4>Sikt: ${data.list[0].visibility}</h4>
+      <h4>Sikt: ${data.list[0].visibility} m</h4>
       <br>
       <br>
       <hr class="divider">
